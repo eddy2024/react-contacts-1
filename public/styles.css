@@ -17,4 +17,8 @@ h5{
     margin-bottom:"3rem";
     margin-right: "1rem";
     background:url("image/background.jpg")
-} 
+}
+
+.edit{
+    text-align:"Center"
+}

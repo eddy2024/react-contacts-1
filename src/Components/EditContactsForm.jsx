@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 
-class ContactForm extends Component {
+class EditContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      location: "",
-      phone: "",
+      name: props.contactInfo.name,
+      location: props.contactInfo.location,
+      phone: props.contactInfo.phone,
+        id: props.contactInfo.id
     };
   }
 
@@ -22,7 +23,8 @@ class ContactForm extends Component {
 
     handleSubmit =  (e)=>{
         e.preventDefault();
-        this.props.addContact(this.state);
+        //this.props.addContact(this.state);
+        this.props.editContact(this.state.id, this.state)
 
         // set contactform imput to empty fields
         this.setState({
@@ -30,6 +32,9 @@ class ContactForm extends Component {
             location: "",
             phone: ""
         });
+        // pass edit form close props
+        this.props.closeModal();
+        
     };
 
   render() {
@@ -47,7 +52,7 @@ class ContactForm extends Component {
             />
           </Form.Group>
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Location:</Form.Label>
+            <Form.Label>Location</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter location"
@@ -81,4 +86,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default EditContactForm;

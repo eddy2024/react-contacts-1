@@ -7,8 +7,14 @@ import Contact from './Contact';
         <Container>
             <Row>
                 {
-                    props.contactData.map((contact, index) => {
-                        return <Contact contactInfo = {contact} key = {index} />
+                    props.contactData.map((contact) => {
+                        return <Contact 
+                        contactInfo = {contact}
+                         key = {contact.id} 
+                         deleteContact={props.deleteContact}
+                         editContact={props.editContact}
+                         
+                         />
                     })
                 }
                 
