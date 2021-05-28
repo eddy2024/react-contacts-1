@@ -6,15 +6,15 @@ h5{
 
 .moveRight{
     margin-left: 15px;
+    padding-bottom: 10px;
 }
 
 .moveDown{
-    margin: 15px 0px;
+    margin-bottom: 15px;
 }
 .back{
-    margin-top:"3rem";
-    padding-top:"3rem";
-    margin-bottom:"3rem";
+    
+    padding-top:"3rem";    
     margin-right: "1rem";
     background:url("image/background.jpg")
 }

@@ -61,13 +61,13 @@ class App extends Component {
         <Container
           fluid
           className="back"
-          style={{
-            marginTop: "3rem",
-            paddingTop: "3rem",
-            marginBotton: "3rem",
-            marginRight: "1rem",
-            backgroundColor: "lightgray",
-            backgroundImage: `url("background.jpg")`,
+          style={{  
+                     
+            paddingTop: "3rem",            
+            marginRight: "1rem",   
+                      
+            backgroundImage: `url("background.jpg")`
+          
           }}
         >
           <Row>
